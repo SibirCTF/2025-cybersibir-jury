@@ -1,0 +1,217 @@
+## Combined config for ctf01d
+# use 2 spaces for tab
+
+game:
+  id: "cybersibir2025" # uniq gameid must be regexp [a-z0-9]+
+  name: "CyberSibir 2025" # visible game name in scoreboard
+  start: "2025-03-28 04:20:00" # start time of game (UTC)
+  end: "2025-03-28 12:20:00" # end time of game (UTC)
+  coffee_break_start: "2025-03-28 07:00:00" # start time of game coffee break (UTC), but it will be ignored if period more (or less) then start and end
+  coffee_break_end: "2025-03-28 08:00:00" # end time of game coffee break (UTC), but it will be ignored if period more (or less) then start and end
+  flag_timelive_in_min: 1 # you can change flag time live (in minutes)
+  basic_costs_stolen_flag_in_points: 1 # basic costs stolen (attack) flag in points for adaptive scoreboard
+  cost_defence_flag_in_points: 1.0 # cost defences flag in points
+
+scoreboard:
+  port: 8080 # http port for scoreboard
+  htmlfolder: "./html" # web page for scoreboard see index-template.html
+  random: no # If yes - will be random values in scoreboard
+
+checkers:
+  - id: "eyesee" # work directory will be checker_eyesee
+    service_name: "EyeSee"
+    enabled: yes
+    script_path: "./checker.py"
+    script_wait_in_sec: 10 # max time for running script
+    time_sleep_between_run_scripts_in_sec: 30 # like a round for service
+  - id: "mspd" # work directory will be checker_mspd
+    service_name: "MSPD"
+    enabled: yes
+    script_path: "./checker.py"
+    script_wait_in_sec: 10
+    time_sleep_between_run_scripts_in_sec: 30
+  - id: "ncdex" # work directory will be checker_ncdex
+    service_name: "NcDEx"
+    enabled: yes
+    script_path: "./checker.rb"
+    script_wait_in_sec: 10
+    time_sleep_between_run_scripts_in_sec: 30
+  - id: "unpleasant" # work directory will be checker_unpleasant
+    service_name: "Unpleasant"
+    enabled: yes
+    script_path: "./checker.py"
+    script_wait_in_sec: 10
+    time_sleep_between_run_scripts_in_sec: 30
+  - id: "wrnum" # work directory will be checker_wrnum
+    service_name: "WrNum"
+    enabled: yes
+    script_path: "./checker.py"
+    script_wait_in_sec: 10
+    time_sleep_between_run_scripts_in_sec: 30
+  - id: "bank" # work directory will be checker_bank
+    service_name: "CyberBank"
+    enabled: yes
+    script_path: "./checker.py"
+    script_wait_in_sec: 10
+    time_sleep_between_run_scripts_in_sec: 30
+  - id: "neli234" # work directory will be checker_neli234
+    service_name: "NeuroLink234"
+    enabled: yes
+    script_path: "./checker.py"
+    script_wait_in_sec: 15
+    time_sleep_between_run_scripts_in_sec: 45
+  - id: "bigu" # work directory will be checker_bigu
+    service_name: "BioGuard"
+    enabled: yes
+    script_path: "./checker.py"
+    script_wait_in_sec: 20
+    time_sleep_between_run_scripts_in_sec: 60
+
+teams:
+  - id: "t01" # must be uniq
+    name: "QarabagTeam"
+    active: yes
+    logo: "./html/images/teams/team01.png"
+    ip_address: "10.10.1.3" # address to vulnserver
+  - id: "t02" # must be uniq
+    name: "W@zz4b1"
+    active: yes
+    logo: "./html/images/teams/team02.png"
+    ip_address: "10.10.2.3" # address to vulnserver
+  - id: "t03" # must be uniq
+    name: "😼-from-telega"
+    active: yes
+    logo: "./html/images/teams/team03.png"
+    ip_address: "10.10.3.3" # address to vulnserver
+  - id: "t04" # must be uniq
+    name: "R3T4RD0Z"
+    active: yes
+    logo: "./html/images/teams/team04.png"
+    ip_address: "10.10.4.3" # address to vulnserver
+  - id: "t05" # must be uniq
+    name: "химозный рулет"
+    active: yes
+    logo: "./html/images/teams/team05.png"
+    ip_address: "10.10.5.3" # address to vulnserver
+  - id: "t06" # must be uniq
+    name: "SiBears"
+    active: yes
+    logo: "./html/images/teams/team06.png"
+    ip_address: "10.10.6.3" # address to vulnserver
+  - id: "t07" # must be uniq
+    name: "KEKW"
+    active: yes
+    logo: "./html/images/teams/team07.png"
+    ip_address: "10.10.7.3" # address to vulnserver
+  - id: "t08" # must be uniq
+    name: "CyberCrige"
+    active: yes
+    logo: "./html/images/teams/team08.png"
+    ip_address: "10.10.8.3" # address to vulnserver
+  - id: "t09" # must be uniq
+    name: "NFB"
+    active: yes
+    logo: "./html/images/teams/team09.png"
+    ip_address: "10.10.9.3" # address to vulnserver
+
+  - id: "t10" # must be uniq
+    name: "SharLike"
+    active: yes
+    logo: "./html/images/teams/team10.png"
+    ip_address: "10.10.10.3" # address to vulnserver
+  - id: "t11" # must be uniq
+    name: "scarecrow"
+    active: yes
+    logo: "./html/images/teams/team11.png"
+    ip_address: "10.10.11.3" # address to vulnserver
+  - id: "t12" # must be uniq
+    name: "d34dl1n3"
+    active: yes
+    logo: "./html/images/teams/team12.png"
+    ip_address: "10.10.12.3" # address to vulnserver
+  - id: "t13" # must be uniq
+    name: "Keva"
+    active: yes
+    logo: "./html/images/teams/team13.png"
+    ip_address: "10.10.13.3" # address to vulnserver
+  - id: "t14" # must be uniq
+    name: "4Ray"
+    active: yes
+    logo: "./html/images/teams/team14.png"
+    ip_address: "10.10.14.3" # address to vulnserver
+  - id: "t15" # must be uniq
+    name: "NON@me13"
+    active: yes
+    logo: "./html/images/teams/team15.png"
+    ip_address: "10.10.15.3" # address to vulnserver
+  - id: "t16" # must be uniq
+    name: "XAKCET"
+    active: yes
+    logo: "./html/images/teams/team16.png"
+    ip_address: "10.10.16.3" # address to vulnserver
+  - id: "t17" # must be uniq
+    name: "TyumGUard"
+    active: yes
+    logo: "./html/images/teams/team17.png"
+    ip_address: "10.10.17.3" # address to vulnserver
+  - id: "t18" # must be uniq
+    name: "datapoisen"
+    active: yes
+    logo: "./html/images/teams/team18.png"
+    ip_address: "10.10.18.3" # address to vulnserver
+  - id: "t19" # must be uniq
+    name: "NetOverkill"
+    active: yes
+    logo: "./html/images/teams/team19.png"
+    ip_address: "10.10.19.3" # address to vulnserver
+
+  - id: "t20" # must be uniq
+    name: "CUT"
+    active: yes
+    logo: "./html/images/teams/team20.png"
+    ip_address: "10.10.20.3" # address to vulnserver
+  - id: "t21" # must be uniq
+    name: "IBEEE"
+    active: yes
+    logo: "./html/images/teams/team21.png"
+    ip_address: "10.10.21.3" # address to vulnserver
+  - id: "t22" # must be uniq
+    name: "o1d_bu7_go1d"
+    active: yes
+    logo: "./html/images/teams/team22.png"
+    ip_address: "10.10.22.3" # address to vulnserver
+  - id: "t23" # must be uniq
+    name: "CyberPatriots"
+    active: yes
+    logo: "./html/images/teams/team23.png"
+    ip_address: "10.10.23.3" # address to vulnserver
+  - id: "t24" # must be uniq
+    name: "vim>nano"
+    active: yes
+    logo: "./html/images/teams/team24.png"
+    ip_address: "10.10.24.3" # address to vulnserver
+  - id: "t25" # must be uniq
+    name: "ГостиИзБудущего"
+    active: yes
+    logo: "./html/images/teams/team25.png"
+    ip_address: "10.10.25.3" # address to vulnserver
+  - id: "t26" # must be uniq
+    name: "Циферки"
+    active: yes
+    logo: "./html/images/teams/team26.png"
+    ip_address: "10.10.26.3" # address to vulnserver
+  - id: "t27" # must be uniq
+    name: "Team #27"
+    active: yes
+    logo: "./html/images/teams/team27.png"
+    ip_address: "10.10.27.3" # address to vulnserver
+  - id: "t28" # must be uniq
+    name: "Team #28"
+    active: yes
+    logo: "./html/images/teams/team28.png"
+    ip_address: "10.10.28.3" # address to vulnserver
+  - id: "t29" # must be uniq
+    name: "Team #29"
+    active: yes
+    logo: "./html/images/teams/team29.png"
+    ip_address: "10.10.29.3" # address to vulnserver

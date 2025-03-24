@@ -1,0 +1,5 @@
+Faker==37.0.0
+grpcio==1.71.0
+grpcio-tools==1.71.0
+protobuf==5.29.3
+tzdata==2025.1

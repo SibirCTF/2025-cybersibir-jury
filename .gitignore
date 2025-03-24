@@ -172,3 +172,31 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+/data/db
+/data/checker_mspd/*_MSPD.db
+/data/checker_neli234/*.db
+/data/checker_bigu/*_BioGuard.db
+/data/checker_ncdex/*.db
+/data/html/css
+/data/html/js
+/data/html/images/states
+/data/html/images/actions
+/data/html/favicon-16x16.png
+/data/html/favicon-32x32.png
+/data/html/favicon.ico
+/data/html/images/activity.svg
+/data/html/images/attack-points.svg
+/data/html/images/attack.svg
+/data/html/images/defence-flags.svg
+/data/html/images/defence-points.svg
+/data/html/images/details.svg
+/data/html/images/first-blood.svg
+/data/html/images/logo.png
+/data/html/images/points.svg
+/data/html/images/round-time.svg
+/data/html/images/sla.svg
+/data/html/images/trend-down.svg
+/data/html/images/trend-middle.svg
+/data/html/images/trend-up.svg
+/data/html/index.html

@@ -1,0 +1,6 @@
+class BaseCheckerException(Exception):
+    ...
+
+
+class FlagProblem(BaseCheckerException):
+    ...

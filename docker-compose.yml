@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  ctf01d_jury:
+    container_name: cybersibir2025_jury_ctf01d
+    image: sea5kg/ctf01d:v0.5.5
+    volumes:
+      - "./data:/usr/share/ctf01d"
+    environment:
+      CTF01D_WORKDIR: "/usr/share/ctf01d"
+    ports:
+      - "80:8080"
+    restart: always
+    networks:
+      - ctf01d_net
+
+networks:
+  ctf01d_net:
+    driver: bridge
